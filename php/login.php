@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 ?>
 <?php
 echo file_get_contents("../html/head.html");
-?>  
+?>
 <body>
 <?php echo file_get_contents("../html/header.html");?>
 <?php echo file_get_contents("../html/loginform.html");?>
