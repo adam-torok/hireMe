@@ -21,7 +21,7 @@ p{
   background-image:url(../images/bgsvg.svg);
   background-repeat: repeat;
   background-size: cover;
-  height: 100vh;
+  height: 160vh;
   flex-direction: column;
   background-position: center;
 }
@@ -42,7 +42,7 @@ p{
       max-width: 1080px;
     width: 100%;
     text-align: center;
-    height: 90vh;
+    height: 80vh;
     position: relative;
     margin: 0px auto;
     padding: 0px 24px;

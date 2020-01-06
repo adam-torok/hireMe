@@ -25,20 +25,20 @@ echo file_get_contents("../html/head.html");
 
     <div class="container">
         <div class="text">
-        <section>
+        <section class="animated fadeIn faster">
           <img src="../images/take_a_note_2.svg" alt="">
     <br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         <br> Nobis rerum soluta voluptate temporibus fuga dicta ad in eum, iusto excepturi debitis ipsa laboriosam reiciendis ut facere deleniti consectetur distinctio minima.
         </section>
-        <section>
+        <section class="animated fadeIn fast">
           <img src="../images/take_a_note_2.svg" alt="">
 
 <br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         <br> Nobis rerum soluta voluptate temporibus fuga dicta ad in eum, iusto excepturi debitis ipsa laboriosam reiciendis ut facere deleniti consectetur distinctio minima.
         </section>
-        <section>
+        <section class="animated fadeIn slow">
           <img src="../images/take_a_note_2.svg" alt="">
 
 <br>
@@ -47,15 +47,6 @@ echo file_get_contents("../html/head.html");
         </section>
         </div>
 </div>
-<div class="contact">
-        <div class="content">
-        <h1>Contact</h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, error.</p>
-<li><i>+53252353</i> </li>
-<li><i>6725 Szeged Sehol utca 72.</i> </li>
-        </div>
-</div>
-
 
  <?php echo file_get_contents("../html/footer.html");?>
 </body>
