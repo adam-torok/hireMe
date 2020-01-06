@@ -1,29 +1,24 @@
 <div class="container">
-        <div class="form">
+        <div class="animated bounceInLeft delay-0.5s form">
             <form  onsubmit="return checkCredentials()" action="#" method="POST">
             <i style="text-align: center" class="fas fa-user-circle fa-3x"></i>
-                <h1>registrate</h1>
-                <input id="username" onkeypress="CheckUser()" type="text" name="username" placeholder="username" required>
+                <h1>Regisztráció</h1>
+                <input id="username" onkeypress="CheckUser()" type="text" name="username" placeholder="Felhasználónév" required>
                 <p style="display:none" id="userErrorMessage" class="errorMessage">*Felhasználónév legalább 5karakter</p>
                 <br>
-                <br>
-                <input id="password" onkeypress="CheckPassword()" type="password" name="password" placeholder="password" required>
-                <p style="display:none" id="passwordErrorMessage" class="errorMessage">*Jelszó nem elég hosszú<
+                <input id="password" onkeypress="CheckPassword()" type="password" name="password" placeholder="Jelszó" required>
+                <p style="display:none" id="passwordErrorMessage" class="errorMessage">*Jelszó nem elég hosszú</p>
                   <br>
-                  <br>
-                <input type="password" name="password_again" placeholder="password-again" required>
+                <input type="password" name="password_again" placeholder="Jelszó mégegyszer" required>
                 <p style="display:none" class="errorMessage">*A jelszó nem egyezik meg</p>
                 <br>
-                <br>
-                <input type="email" name="email" placeholder="email" required>
+                <input type="email" name="email" placeholder="E-mail cím" required>
                 <p style="display:none" class="errorMessage">*Hibás email formátum.</p>
-
                 <br>
-                <br>
-                <a href="../php/login.php" class="registrate" style="text-align: right">Already have an account? Login</a>
+                <a href="../php/login.php" class="registrate" style="text-align: left">Van már fiókod? Bejelentkezés</a>
                 <br>
                 <p style="display:none" id="submitErrorMessage" class="errorMessage">*Hiba történt...</p>
-                <input class="cta" id="submit" class="button" type="submit" value="submit">
+                <input class="cta" id="submit" class="button" type="submit" value="Regisztrálok">
             </form>
         </div>
     </div>

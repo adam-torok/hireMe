@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "employee");
+$conn = new mysqli("localhost", "root", "qwert", "employee");
 if ($conn -> errno) {
     die("Hiba a kapcsolat létrehozásakor!");
 }

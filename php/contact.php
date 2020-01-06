@@ -24,24 +24,28 @@ echo file_get_contents("../html/head.html");
 </style>
 
     <div class="container">
-   <h1 style="color:white">Lorem ipsum dolor sit amet.</h1>
         <div class="text">
         <section>
+          <img src="../images/take_a_note_2.svg" alt="">
     <br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         <br> Nobis rerum soluta voluptate temporibus fuga dicta ad in eum, iusto excepturi debitis ipsa laboriosam reiciendis ut facere deleniti consectetur distinctio minima.
         </section>
         <section>
+          <img src="../images/take_a_note_2.svg" alt="">
+
 <br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         <br> Nobis rerum soluta voluptate temporibus fuga dicta ad in eum, iusto excepturi debitis ipsa laboriosam reiciendis ut facere deleniti consectetur distinctio minima.
         </section>
         <section>
+          <img src="../images/take_a_note_2.svg" alt="">
+
 <br>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         <br> Nobis rerum soluta voluptate temporibus fuga dicta ad in eum, iusto excepturi debitis ipsa laboriosam reiciendis ut facere deleniti consectetur distinctio minima.
         </section>
-        </div>  
+        </div>
 </div>
 <div class="contact">
         <div class="content">
