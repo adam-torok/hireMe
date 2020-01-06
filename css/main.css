@@ -20,6 +20,7 @@ p{
   background-size: cover;
   height: 100vh;
   flex-direction: column;
+  background-position: center;
 }
 .y{
   background-image:url(../images/footer.svg);
@@ -65,12 +66,14 @@ p{
   display: flex;
   flex: 1 1 0%;
   padding: 24px;
+  align-items: center;
   flex-direction: column;
 }
 form{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 .form{
     background: white;
@@ -198,9 +201,12 @@ section{
     text-decoration: none;
     color:white;
     transition: all 0.2s ease-in-out;
+    width: 100px;
+    box-shadow:rgba(5, 160, 206, 0.15) 0px 20px 60px 0px;
+
 }
 .cta:hover{
-    box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+  box-shadow:rgba(5, 160, 206, 0.15) 0px 20px 60px 0px;
     transform: scale(1.05);
 }
 .profile-card{
