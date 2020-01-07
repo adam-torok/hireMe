@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 h1{
     color:black;
@@ -11,10 +12,85 @@ h1{
 .landing-image{
 
 }
+.card{
+  padding: 0px 24px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px 0px;
+  margin: 1rem;
+  display: flex;
+    width: calc(14.33% - 16px);
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px 0px;
+    cursor: pointer;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin: 8px;
+    border-radius: 5px;
+    padding: 0px 32px;
+    transition: all 0.2s ease-in 0s;
+}
+.card:hover{
+  box-shadow: rgba(5, 160, 206, 0.15) 0px 20px 60px 0px;
+
+}
+.search-area{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  padding: 0 10rem 0 10rem;
+}
+.search-input{
+  font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    width: 30%;
+    padding-left: 32px;
+    transition: all 0.2s ease-in 0s;
+    outline: none;
+    border-radius: 25px;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    align-self: center;
+    text-align: start;
+}
+.search-input:focus{
+  border: 1px solid grey;
+
+}
+.search-tag-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  align-content: center;
+  justify-items:center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 130px 0px 90px;
+}
 .footer-icon{
 color:lightblue;
 }
 p{
+  font-size: 12px!important;
     color:rgb(72, 72, 72);
 }
 .x{
@@ -213,6 +289,7 @@ section{
 .profile-card{
     background-color: white;
     padding: 1rem;
+    box-shadow: rgba(5, 160, 206, 0.15) 0px 20px 60px 0px;
     border-radius: 25px;
     text-align: center;
     width: 50%;
