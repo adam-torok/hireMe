@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once("../config/config.php");
-
 if(isset($_POST['submit'])){
     if(isset($_POST['username'])){
         $username  = $_POST['username'];

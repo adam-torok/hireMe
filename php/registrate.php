@@ -3,18 +3,17 @@
 include_once("../config/config.php");
 
 if(!empty($_POST['username'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        $stmt = $conn -> prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
-        $stmt -> bind_param("sss", $username, $password , $email);
-        if ($stmt -> execute()) {
-            header("Location: login.php");
-        }
-        $stmt -> close();
-        $conn -> close();
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $email = $_POST['email'];
+  $stmt = $conn -> prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
+  $stmt -> bind_param("sss", $username, $password , $email);
+  if ($stmt -> execute()) {
+      header("Location: login.php");
+  }
+  $stmt -> close();
+  $conn -> close();
 }
-
 ?>
 <?php echo file_get_contents("../html/head.html");?>
 <body>
@@ -52,7 +51,6 @@ function CheckPassword(){
 }
 function checkEmail(){
     return true;
-    // - kell még email valid.
 }
 function checkCredentials(){
     if(userCheck == true && passwordCheck == true ){
