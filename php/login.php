@@ -13,10 +13,9 @@ if(isset($_POST['submit'])){
         $_SESSION['username'] = $username;
         header("Location: index.php");
     }else {
-        echo "Helytelen adatok";
         $_SESSION['logged'] = false;
-        header("Location: registrate.php");
-    }
+        $_SESSION['error'] = "Helytelen belépési adatok.";
+     }
 }
 ?>
 <?php
@@ -24,6 +23,10 @@ echo file_get_contents("../html/head.html");
 ?>
 <body>
 <?php echo file_get_contents("../html/header.html");?>
+<?php if(!empty($_SESSION['error'])){
+  echo '<h5 style="text-align:center;color:red" class="animated bounceInUp slow">'.$_SESSION['error'].'</h5>';
+  unset($_SESSION['error']);
+} ?>
 <?php echo file_get_contents("../html/loginform.html");?>
 <?php echo file_get_contents("../html/footer.html");?>
 </body>

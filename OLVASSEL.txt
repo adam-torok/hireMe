@@ -1,0 +1,4 @@
+felhasznalonev: sze8torada
+jelszo : jelszo
+
+// vagy regisztráció
