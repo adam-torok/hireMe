@@ -10,8 +10,8 @@ if(!isset($_SESSION['logged'])){
 
 $mysqltime = date ("Y-m-d");
 $sql = "SELECT * FROM employee";
-$res = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_assoc($res)){
+$res = $conn -> query($sql);
+while($row = $res -> fetch_assoc()){
   $myId = $row['category_id'];
 }
 if(isset($_POST['filter'])){
@@ -30,9 +30,6 @@ if(isset($_POST['filter'])){
   else{
     $sql = "SELECT * FROM employee where 1+1=2";
   }
-
-
-
   if(isset($_POST['yearsold'])){
     switch ($_POST['yearsold']) {
       case '25':
@@ -47,7 +44,6 @@ if(isset($_POST['filter'])){
         break;
     }
   }
-
   switch ($_POST['filter']) {
     case 'na':
       $sql .= " AND work_exp LIKE 'Pályakezdő'";
@@ -65,8 +61,6 @@ if(isset($_POST['filter'])){
       break;
   }
 }
-
-
 ?>
 <body>
   <div class="search-area-inner">
@@ -76,8 +70,8 @@ if(isset($_POST['filter'])){
   </div>
   <div class="search-tag-container">
     <?php
-        $result = mysqli_query($conn,$sql);
-        while($row = mysqli_fetch_assoc($result)){
+        $result = $conn -> query($sql);
+        while($row = $result -> fetch_assoc()){
           $myID = $row['category_id']
           ?>
           <div data-person-id="<?php echo $row['id'];?>" class="card person animated fadeIn">
@@ -88,8 +82,8 @@ if(isset($_POST['filter'])){
             <p><?php
             $myID = $row['category_id'];
             $sql = "SELECT * from categories where id = $myID";
-            $res = mysqli_query($conn,$sql);
-            while($innerRow = mysqli_fetch_assoc($res)){
+            $res = $conn -> query($sql);
+            while($innerRow = $res -> fetch_assoc()){
               $myID = $innerRow['name'];
             }
             echo $myID;

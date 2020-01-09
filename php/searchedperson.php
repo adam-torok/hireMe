@@ -10,8 +10,8 @@ $personId = $_GET['person-id'];
 $firstName = "";
 $lastName = "";
 $sql = "SELECT first_name, last_name, bio FROM employee WHERE id = $personId";
-$result = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_assoc($result)){
+$result = $conn -> query($sql);
+while($row = $result -> fetch_assoc()){
   $lastName = $row['last_name'];
   $firstName = $row['first_name'];
   $bio = $row['bio'];
@@ -25,8 +25,8 @@ while($row = mysqli_fetch_assoc($result)){
   </div>
   <div class="search-tag-container">
   <?php $sql = "SELECT * FROM employee WHERE id = $personId";
-      $result = mysqli_query($conn,$sql);
-      while($row = mysqli_fetch_assoc($result)){
+      $result = $conn -> query($sql);
+      while($row = $result -> fetch_assoc()){
         ?>
         <div data-person-id="<?php echo $row['id'];?>" class="person-container animated zoomInDown">
           <div>
@@ -55,6 +55,6 @@ $(".person").click(function(){
 });
 </script>
 <?php
-echo file_get_contents("../html/footer.html");
+include_once("../html/footer.html");
 $conn -> close();
 ?>

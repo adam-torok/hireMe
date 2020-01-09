@@ -15,11 +15,11 @@ if(!empty($_POST['username'])){
   $conn -> close();
 }
 ?>
-<?php echo file_get_contents("../html/head.html");?>
+<?php include_once("../html/head.html");?>
 <body>
-<?php echo file_get_contents("../html/header.html");?>
-<?php echo file_get_contents("../html/regform.html");?>
-<?php echo file_get_contents("../html/footer.html");?>
+<?php include_once("../html/header.html");?>
+<?php include_once("../html/regform.html");?>
+<?php include_once("../html/footer.html");?>
 </body>
 <script>
 var userCheck = false;

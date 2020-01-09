@@ -23,10 +23,8 @@ echo file_get_contents("../html/header-in.html");
     <p>Milyen munkában vagy jártas?!</p>
   </div>
 </div>
-
 <?php echo file_get_contents("../html/footer.html");?>
 <?php }
-
 else{
     echo file_get_contents("../html/header.html");
 }

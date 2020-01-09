@@ -41,7 +41,7 @@
     <div class="search-tag-container">
     <?php $sql = "SELECT * FROM categories;";
         $result = mysqli_query($conn,$sql);
-        while($row = mysqli_fetch_assoc($result)){
+        while($row = $result -> fetch_assoc()){
           ?>
           <div data-id="<?php echo $row['id']?>" class="card">
             <img src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
@@ -55,7 +55,5 @@
 </body>
     <script src="../JS/jquery.js" charset="utf-8"></script>
     <script src="../JS/main.js" charset="utf-8"></script>
-    <?php
-    echo file_get_contents("../html/footer.html");
-    $conn -> close();
-?>
+    <?php include_once("../html/footer.html");
+    $conn -> close(); ?>

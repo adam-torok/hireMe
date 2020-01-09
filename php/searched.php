@@ -6,17 +6,20 @@ include_once("../html/header-in.html");
 if(!isset($_SESSION['logged'])){
   header("Location: ../html/index.html");
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $sid = $_GET['id'];
 $categoryName = "";
 $sql = "SELECT * FROM categories WHERE id = '$sid'";
-$result = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_assoc($result)){
+$result = $conn -> query($sql);
+while($row = $result -> fetch_assoc()){
   $categoryName = $row['name'];
 };
 $all = "";
 $sql = "SELECT count(*) as total FROM employee";
-$res = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_assoc($res)){
+$res = $conn -> query($sql);
+while($row = $res -> fetch_assoc()){
  $all  = $row['total'];
   }
 if($sid == "all"){
@@ -25,12 +28,7 @@ if($sid == "all"){
 else{
   $toquery = "SELECT * FROM employee WHERE category_id = $sid";
 }
-$currjob = "";
-$sql = "SELECT * FROM categories WHERE id = $sid";
-    $result = mysqli_query($conn,$sql);
-    while($row = mysqli_fetch_assoc($result)){
-      $currjob = $row['name'];
-    }
+
 ?>
 <body>
   <div class="search-area-inner">
@@ -40,8 +38,8 @@ $sql = "SELECT * FROM categories WHERE id = $sid";
   </div>
   <div class="search-tag-container">
   <?php $sql = $toquery;
-      $result = mysqli_query($conn,$sql);
-      while($row = mysqli_fetch_assoc($result)){
+      $result = $conn -> query($toquery);
+      while($row = $result -> fetch_assoc()){
         ?>
         <div data-person-id="<?php echo $row['id'];?>" class="card person animated fadeIn">
           <img src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
@@ -66,6 +64,6 @@ $(".person").click(function(){
 });
 </script>
 <?php
-echo file_get_contents("../html/footer.html");
+ include_once("../html/footer.html");
 $conn -> close();
 ?>
