@@ -3,24 +3,23 @@
 include_once("../config/config.php");
 
 if(!empty($_POST['username'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        $stmt = $conn -> prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
-        $stmt -> bind_param("sss", $username, $password , $email);
-        if ($stmt -> execute()) {
-            header("Location: login.php");
-        }
-        $stmt -> close();
-        $conn -> close();
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $email = $_POST['email'];
+  $stmt = $conn -> prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
+  $stmt -> bind_param("sss", $username, $password , $email);
+  if ($stmt -> execute()) {
+      header("Location: login.php");
+  }
+  $stmt -> close();
+  $conn -> close();
 }
-
 ?>
-<?php echo file_get_contents("../html/head.html");?>
+<?php include_once("../html/head.html");?>
 <body>
-<?php echo file_get_contents("../html/header.html");?>
-<?php echo file_get_contents("../html/regform.html");?>
-<?php echo file_get_contents("../html/footer.html");?>
+<?php include_once("../html/header.html");?>
+<?php include_once("../html/regform.html");?>
+<?php include_once("../html/footer.html");?>
 </body>
 <script>
 var userCheck = false;
@@ -52,7 +51,6 @@ function CheckPassword(){
 }
 function checkEmail(){
     return true;
-    // - kell még email valid.
 }
 function checkCredentials(){
     if(userCheck == true && passwordCheck == true ){
