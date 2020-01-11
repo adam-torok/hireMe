@@ -18,9 +18,8 @@ echo file_get_contents("../html/header-in.html");
 <div class="container">
   <div class="profile-card">
     <h1>Profil</h1>
-    <p>Keress munkát velünk!</p>
-    <img style="width:90%; height:50%" src="../images/data.svg" alt="">
-    <p>Milyen munkában vagy jártas?!</p>
+    <i>Sajnáljuk, oldalunk jelenleg felújítás alatt áll. </i>
+    <img style="padding:3rem;width:90%; height:40%" src="../images/data.svg" alt="">
   </div>
 </div>
 <?php echo file_get_contents("../html/footer.html");?>

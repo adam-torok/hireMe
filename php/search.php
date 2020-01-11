@@ -12,7 +12,7 @@
     font-size: 12px;
   }
 </style>
-<body>
+<body class="search-body">
   <div class="layout">
     </h1>
     <div class="search-area">

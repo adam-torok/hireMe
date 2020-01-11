@@ -30,7 +30,7 @@ else{
 }
 
 ?>
-<body>
+<body class="search-body">
   <div class="search-area-inner">
     <h1>Talált személyek</h1>
     <p>Jelenleg <?php echo$all?> személy keres állást oldalunkon</p>
@@ -42,9 +42,10 @@ else{
       while($row = $result -> fetch_assoc()){
         ?>
         <div data-person-id="<?php echo $row['id'];?>" class="card person animated fadeIn">
-          <img src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
+          <img class="card-img" src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
           <p><?php echo $row['last_name'];?> <?php echo $row['first_name'];?></p>
           <p><?php echo $categoryName?></p>
+          <p><?php echo $row['born'];?></p>
           <p><?php echo $row['location'];?></p>
           <p><?php echo $row['work_exp'];?></p>
         </div>
