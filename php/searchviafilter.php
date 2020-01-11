@@ -62,7 +62,7 @@ if(isset($_POST['filter'])){
   }
 }
 ?>
-<body>
+<body class="search-body">
   <div class="search-area-inner">
     <h1>Szűrt személyek</h1>
     <p>Ők a talált személyek, akik alig várják már hogy munkába tudjanak állni.</p>
@@ -75,7 +75,7 @@ if(isset($_POST['filter'])){
           $myID = $row['category_id']
           ?>
           <div data-person-id="<?php echo $row['id'];?>" class="card person animated fadeIn">
-            <img src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
+            <img class="card-img" src="<?php echo $row['path'];?><?php echo $row['filename'];?>">
             <p><?php echo $row['last_name'];?> <?php echo $row['first_name'];?></p>
             <p><?php echo $row['born'];?></p>
             <p><?php echo $row['location'];?></p>

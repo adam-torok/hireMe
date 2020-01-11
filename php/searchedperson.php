@@ -17,11 +17,11 @@ while($row = $result -> fetch_assoc()){
   $bio = $row['bio'];
 }
 ?>
-<body>
+<body class="search-body">
   <div class="search-area-inner">
     <h1><?php echo $lastName." ".$firstName?></h1>
     <h6>Amit jó rolam tudni: </h6>
-    <p><?php echo $bio;?></p>
+    <p style="max-width:50vw;text-align:left"><?php echo $bio;?></p>
   </div>
   <div class="search-tag-container">
   <?php $sql = "SELECT * FROM employee WHERE id = $personId";
